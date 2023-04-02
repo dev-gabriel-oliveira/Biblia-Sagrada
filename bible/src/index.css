@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'Font';
+  src: url("./fonts/BerryRotunda.ttf");
+}
+
+body {
+  display: grid;
+
+  background-image: linear-gradient(0.25turn, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.5) 40% 60%, rgba(255, 255, 255, 0)),
+                    url('./background/Background.jpg');
+  background-size: 50%;
+  background-attachment: fixed;
+  background-position: center;
+
+  margin: 0;
+
+  font-family: 'Font';
+  text-align: center;
+  color: white;
+}
+a{
+  color: orange;
+  text-decoration: none;
+  transition: 0.5s;
+}
+a:hover{
+  color: yellow;
+}
+
+.container{
+  padding: 6%;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: none;
+    scrollbar-color: orange rgb(0, 0, 0);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: rgb(0, 0, 0);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: orange;
+    border-radius: 8px;
+  }

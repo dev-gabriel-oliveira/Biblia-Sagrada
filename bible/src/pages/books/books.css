@@ -1,0 +1,15 @@
+.projects .container{
+    padding: 4% 6%;
+}
+.projects .card{
+    border: 1px solid gray;
+    background-color: black;
+    filter: brightness(70%);
+    transition: 1s;
+}
+.projects .card:hover{
+    border: 1px solid blueviolet;
+    color: violet;
+    transform: scale(105%);
+    filter: brightness(100%);
+}

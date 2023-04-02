@@ -1,0 +1,31 @@
+.nav-circle .dropdown-toggle{
+    margin-top: 2%;
+
+    background-color: black;
+    border: 2px solid gray;
+
+    transition: 0.5s;
+}
+.nav-circle .dropdown-toggle:hover{
+    color: orange;
+    border: 2px solid orange;
+}
+
+.nav-circle ul.dropdown-menu{
+    text-align: center;
+    background: #111;
+    padding: 8px 0px 2.5px 0px;
+
+    border: 2px solid white;
+    transition: 0s;
+}
+.nav-circle ul.dropdown-menu:hover{
+    border: 2px solid orange;
+}
+.nav-circle .dropdown-item:hover{
+    color: orange;
+    background: #222;
+}
+.nav-circle hr{
+    margin: 5px;
+}
