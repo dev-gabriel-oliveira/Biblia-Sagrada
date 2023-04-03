@@ -1,14 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Col, Container, Row, UncontrolledTooltip } from "reactstrap";
+import { Button, Container } from "reactstrap";
 
 import './home.css';
+import cross from './cross.png';
 
 export default function Home() {
     const navigate = useNavigate();
     return(
         <div className="home">
-            <Container>
+            <Container className='title'>
+                <img src={cross} alt='' width={'200px'} style={{margin:'40px'}}/>
+
                 <h1>Bíblia Sagrada</h1>
 
                 <br/>
@@ -31,12 +34,9 @@ export default function Home() {
 
             <hr/>
 
-            <Container>
-                <h5>Por onde quer começar?</h5>
-                <br/>
-                <Button color="warning" onClick={() => navigate('novo-testamento')}>Novo Testamento</Button>
-                <br/><br/>
-                <Button color="warning" onClick={() => navigate('velho-testamento')}>Velho Testamento</Button>
+            <Container className='testaments'>
+                <h5>Vamos começar?</h5>
+                <Button color="warning" onClick={() => navigate('/livros')}>Ir para Livros</Button>
             </Container>
         </div>
     );

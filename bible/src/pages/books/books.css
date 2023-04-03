@@ -1,15 +1,32 @@
-.projects .container{
-    padding: 4% 6%;
+.books .container, .books .container-xl{
+    padding: 4%;
 }
-.projects .card{
-    border: 1px solid gray;
-    background-color: black;
-    filter: brightness(70%);
-    transition: 1s;
+.books .input-group{
+    margin: auto;
+    max-width: 700px;
 }
-.projects .card:hover{
-    border: 1px solid blueviolet;
-    color: violet;
+.books .input-group input{
+    border: none;
+    background: #666;
+    color: white;
+    filter: grayscale(100%);
+}
+
+.books .container .row{
+    justify-content: center;
+}
+.books .container .col{
+    margin: 2%;
+}
+.books .container .col .card{
+    box-shadow: 0px 18px 10px 8px rgba(0,0,0,0.3);
+    transition: 0.5s;
+}
+.books .container .col .card:hover{
+    box-shadow: 0px 18px 10px -2px rgba(0,0,0,0.3);
     transform: scale(105%);
-    filter: brightness(100%);
+}
+.books .container .col h5{
+    font-size: 80%;
+    margin: 0;
 }
