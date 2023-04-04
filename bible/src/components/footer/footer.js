@@ -9,7 +9,7 @@ export default function Footer() {
     <footer>
         <hr/>
         <Container>
-            <p>O presente site utiliza a <Link to={'https://bible-api.com/'}>Bible Api</Link>.</p>
+            <p>O presente site utiliza a <Link to={'https://github.com/MarcioAndrade/Biblia'}>Bible Api</Link>.</p>
             <br/>
             <p>Desenvolvido por <Link>@GabrielOliver</Link></p>
         </Container>

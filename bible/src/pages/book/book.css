@@ -1,0 +1,30 @@
+.book .container{
+    padding: calc(40px + 0.390625vw);
+}
+.book .input-group{
+    justify-content: center;
+    margin: auto;
+    max-width: 700px;
+}
+.book .input-group input{
+    border: none;
+    background: #333;
+    color: white;
+    filter: grayscale(100%);
+}
+.book .input-group svg{
+    width: 25px;
+    height: auto;
+}
+
+.book #pages{
+    background-image: url('./Papiro.jpg');
+    filter: brightness(90%);
+    color: rgba(0, 0, 0, 0.9);
+}
+.book .container .row{
+    justify-content: center;
+}
+.book .container .col{
+    margin: 2% 0%;
+}

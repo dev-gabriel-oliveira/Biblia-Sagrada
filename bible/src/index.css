@@ -3,6 +3,9 @@
   src: url("./fonts/BerryRotunda.ttf");
 }
 
+html{
+  font-size: calc(12px + 0.390625vw);
+}
 body {
   display: grid;
 
@@ -25,6 +28,9 @@ a{
 }
 a:hover{
   color: yellow;
+}
+button{
+  transition: 0.5s !important;
 }
 
 
