@@ -34,9 +34,16 @@ export default function Home() {
 
             <hr/>
 
-            <Container className='testaments'>
-                <h5>Vamos começar?</h5>
+            <Container className='reading'>
+                <h5>Vamos começar as leituras?</h5>
                 <Button color="warning" onClick={() => navigate('/livros')}>Ir para Livros</Button>
+            </Container>
+
+            <hr/>
+
+            <Container className='reading'>
+                <h5>Você também pode buscar por passagens:</h5>
+                <Button color="warning" onClick={() => navigate('/livros')}>Pesquisar</Button>
             </Container>
         </div>
     );
