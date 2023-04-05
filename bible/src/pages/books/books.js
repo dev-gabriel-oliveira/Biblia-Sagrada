@@ -25,12 +25,14 @@ export default function Books() {
     .then((res) => {
       // handle success
       setBooksData(res.data);
-      console.log(res.data);
     })
     .catch((err) => {
       // handle error
       alert(err);
     });
+
+    // Scroll to Top
+    window.scrollTo(0, 0);
   }, [ver]);
 
   return (
@@ -103,7 +105,7 @@ export default function Books() {
                         body
                         className="text-center"
                       >
-                        <Button onClick={() => navigate(`${obj.livroId}`)}>
+                        <Button onClick={() => navigate(`${booksData.indexOf(obj)}/${obj.livroId}`)}>
                           {obj.livro}
                         </Button>
                       </Card>
@@ -127,7 +129,7 @@ export default function Books() {
                         body
                         className="text-center"
                       >
-                        <Button onClick={() => navigate(`${obj.livroId}`)}>
+                        <Button onClick={() => navigate(`${booksData.indexOf(obj)}/${obj.livroId}`)}>
                           {obj.livro}
                         </Button>
                       </Card>
@@ -152,7 +154,7 @@ export default function Books() {
                         body
                         className="text-center"
                       >
-                        <Button onClick={() => navigate(`${obj.livroId}`)}>
+                        <Button onClick={() => navigate(`${booksData.indexOf(obj)}/${obj.livroId}`)}>
                           {obj.livro}
                         </Button>
                       </Card>
@@ -177,7 +179,7 @@ export default function Books() {
                         body
                         className="text-center"
                       >
-                        <Button onClick={() => navigate(`${obj.livroId}`)}>
+                        <Button onClick={() => navigate(`${booksData.indexOf(obj)}/${obj.livroId}`)}>
                           {obj.livro}
                         </Button>
                       </Card>
@@ -202,7 +204,7 @@ export default function Books() {
                         body
                         className="text-center"
                       >
-                        <Button onClick={() => navigate(`${obj.livroId}`)}>
+                        <Button onClick={() => navigate(`${booksData.indexOf(obj)}/${obj.livroId}`)}>
                           {obj.livro}
                         </Button>
                       </Card>
@@ -227,7 +229,7 @@ export default function Books() {
                         body
                         className="text-center"
                       >
-                        <Button onClick={() => navigate(`${obj.livroId}`)}>
+                        <Button onClick={() => navigate(`${booksData.indexOf(obj)}/${obj.livroId}`)}>
                           {obj.livro}
                         </Button>
                       </Card>

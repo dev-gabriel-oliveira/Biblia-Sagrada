@@ -17,10 +17,19 @@
     height: auto;
 }
 
+.book .chapters{
+    background-color: chocolate;
+    border: none;
+    margin: 0.5%;
+}
+.book .chapters:hover{
+    background-color: saddlebrown;
+}
+
 .book #pages{
     background-image: url('./Papiro.jpg');
-    filter: brightness(90%);
-    color: rgba(0, 0, 0, 0.9);
+    filter: brightness(85%);
+    color: black;
 }
 .book .container .row{
     justify-content: center;

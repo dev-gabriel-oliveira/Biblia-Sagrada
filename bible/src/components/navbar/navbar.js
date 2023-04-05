@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './navbar.css'
 
@@ -10,11 +11,11 @@ export default function NavBar() {
           Menu
         </button>
         <ul className="dropdown-menu dropdown-menu-dark">
-          <li><a className="dropdown-item" href="/">Início</a></li>
+          <li><Link className="dropdown-item" to="/">Início</Link></li>
           <hr/>
-          <li><a className="dropdown-item" href="/livros">Livros</a></li>
+          <li><Link className="dropdown-item" to="/livros">Livros</Link></li>
           <hr/>
-          <li><a className="dropdown-item" href="">Sobre</a></li>
+          <li><Link className="dropdown-item" to="/sobre">Sobre</Link></li>
         </ul>
       </div>
     </div>

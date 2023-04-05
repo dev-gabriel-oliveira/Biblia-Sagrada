@@ -12,7 +12,7 @@ export default function UserRoutes() {
             <Route path="*" element={<NotFound/>}/>
             <Route path="/" element={<Home/>}/>
             <Route path="/livros" element={<Books/>}/>
-            <Route path="/livros/:id" element={<Book/>}/>
+            <Route path="/livros/:index/:id" element={<Book/>}/>
         </Routes>
     )
 };

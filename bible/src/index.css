@@ -4,7 +4,7 @@
 }
 
 html{
-  font-size: calc(12px + 0.390625vw);
+  font-size: calc(10px + 0.390625vw);
 }
 body {
   display: grid;
@@ -28,6 +28,9 @@ a{
 }
 a:hover{
   color: yellow;
+}
+input::placeholder{
+  color: #aaa !important;
 }
 button{
   transition: 0.5s !important;

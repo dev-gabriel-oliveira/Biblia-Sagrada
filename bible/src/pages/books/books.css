@@ -7,7 +7,7 @@
 }
 .books .input-group input{
     border: none;
-    background: #333;
+    background: #444;
     color: white;
     filter: grayscale(100%);
 }
