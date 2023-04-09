@@ -1,0 +1,42 @@
+.verses .container{
+    padding: calc(40px + 0.390625vw);
+}
+.verses .container-xl{
+    padding: calc(20px + 0.390625vw);
+}
+.verses .input-group{
+    margin: auto;
+    max-width: 700px;
+}
+.verses .input-group input{
+    border: none;
+    background: #444;
+    color: white;
+    filter: grayscale(100%);
+}
+.verses .input-group button{
+    border-left: 1px solid #aaa;
+}
+.verses .input-group svg{
+    width: 25px;
+    height: auto;
+}
+
+.verses .container .spinner-grow{
+    margin: 2%;
+}
+
+.verses .container .row{
+    justify-content: center;
+}
+.verses .container-xl .col{
+    margin: 2%;
+}
+.verses .container-xl .col .card{
+    box-shadow: 0px 18px 10px 8px rgba(0,0,0,0.3);
+    transition: 1s;
+}
+.verses .container-xl .col .card:hover{
+    box-shadow: 0px 18px 10px -2px rgba(0,0,0,0.3);
+    transform: scale(102%);
+}

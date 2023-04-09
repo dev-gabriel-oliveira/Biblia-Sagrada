@@ -1,5 +1,8 @@
-.books .container, .books .container-xl{
+.books .container{
     padding: calc(40px + 0.390625vw);
+}
+.books .container-xl{
+    padding: calc(20px + 0.390625vw);
 }
 .books .input-group{
     margin: auto;
@@ -10,6 +13,9 @@
     background: #444;
     color: white;
     filter: grayscale(100%);
+}
+.books .input-group button{
+    border-left: 1px solid #aaa;
 }
 .books .input-group svg{
     width: 25px;
@@ -36,6 +42,10 @@
     .books #filters{
         display: none;
     }
+}
+
+.books .container .spinner-grow{
+    margin: 2%;
 }
 
 .books .container .row{

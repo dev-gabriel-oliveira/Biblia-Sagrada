@@ -1,5 +1,5 @@
 .nav-circle .dropdown-toggle{
-    margin-top: 2%;
+    margin-top: calc(30px + 0.390625vw);
 
     background-color: black;
     border: 2px solid gray;

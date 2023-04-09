@@ -36,14 +36,21 @@ export default function Home() {
 
             <Container className='reading'>
                 <h5>Vamos começar as leituras?</h5>
-                <Button color="warning" onClick={() => navigate('/livros')}>Ir para Livros</Button>
+                <Button color="warning" onClick={() => navigate('/livros')}>Livros</Button>
             </Container>
 
             <hr/>
 
             <Container className='reading'>
-                <h5>Você também pode buscar por passagens:</h5>
-                <Button color="warning" onClick={() => navigate('/livros')}>Pesquisar</Button>
+                <h5>Você também pode buscar por versículos:</h5>
+                <Button color="warning" onClick={() => navigate('/passagens')}>Passagens</Button>
+            </Container>
+
+            <hr/>
+
+            <Container className='reading'>
+                <h5>Quem sou?</h5>
+                <Button color="warning" onClick={() => navigate('/sobre')}>Sobre</Button>
             </Container>
         </div>
     );

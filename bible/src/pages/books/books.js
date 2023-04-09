@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { Button, Card, Col, Container, Input, InputGroup, Row } from 'reactstrap';
+import { trackPromise, usePromiseTracker } from 'react-promise-tracker';
+import { Button, Card, Col, Container, Input, InputGroup, Row, Spinner } from 'reactstrap';
 import { IoMdRefresh } from 'react-icons/io';
 
 import './books.css'
@@ -9,6 +10,9 @@ import './books.css'
 export default function Books() {
   const navigate = useNavigate();
   const ver = null;
+
+  // Track the Loading Promise
+  const { promiseInProgress } = usePromiseTracker();
 
   // Search
   const [ search, setSearch ] = useState('');
@@ -21,15 +25,17 @@ export default function Books() {
 
   // Get all Books
   useEffect(() => {
-    axios.get('http://biblia.marciocosta.eti.br/v1/Resumo/versao/3')
-    .then((res) => {
-      // handle success
-      setBooksData(res.data);
-    })
-    .catch((err) => {
-      // handle error
-      alert(err);
-    });
+    trackPromise(
+      axios.get('http://biblia.marciocosta.eti.br/v1/Resumo/versao/3')
+      .then((res) => {
+        // handle success
+        setBooksData(res.data);
+      })
+      .catch((err) => {
+        // handle error
+        alert(err);
+      })
+    )
 
     // Scroll to Top
     window.scrollTo(0, 0);
@@ -90,7 +96,14 @@ export default function Books() {
 
         <hr/>
 
-        {filter === '' ? ( // Get ALL Books
+        {promiseInProgress === true ? ( // Loading
+          <Container>
+            <Spinner type='grow'/>
+            <Spinner type='grow'/>
+            <Spinner type='grow'/>
+          </Container>
+        )
+        :filter === '' ? ( // Get ALL Books
           <>
             <Container fluid='xl' id='new'>
               <h3>Novo Testamento</h3>
@@ -107,10 +120,25 @@ export default function Books() {
                       >
                         <Button onClick={() => navigate(`${booksData.indexOf(obj)}/${obj.livroId}`)}>
                           {obj.livro}
-                        </Button>
+                        </Button>                        
                       </Card>
                     </Col>
                 )})}
+
+                {booksData.filter((obj) =>
+                  obj.testamentoId === 2 && obj.livro.toLowerCase().includes(search.toLowerCase())
+                ).length === 0 && (
+                  <Col>
+                    <Card
+                      color='dark'
+                      body
+                      className="text-center"
+                    >
+                      <h5>Sem resultados!</h5>
+                      <p>Tente outra busca</p>
+                    </Card>
+                  </Col>
+                )}
               </Row>
             </Container>
 
@@ -135,6 +163,21 @@ export default function Books() {
                       </Card>
                     </Col>
                 )})}
+
+                {booksData.filter((obj) =>
+                  obj.testamentoId === 1 && obj.livro.toLowerCase().includes(search.toLowerCase())
+                ).length === 0 && (
+                  <Col>
+                    <Card
+                      color='dark'
+                      body
+                      className="text-center"
+                    >
+                      <h5>Sem resultados!</h5>
+                      <p>Tente outra busca</p>
+                    </Card>
+                  </Col>
+                )}
               </Row>
             </Container>
           </>
@@ -160,6 +203,21 @@ export default function Books() {
                       </Card>
                     </Col>
                 )})}
+
+                {booksData.filter((obj) =>
+                  obj.testamentoId === 2 && obj.livro.toLowerCase().includes(search.toLowerCase())
+                ).length === 0 && (
+                  <Col>
+                    <Card
+                      color='dark'
+                      body
+                      className="text-center"
+                    >
+                      <h5>Sem resultados!</h5>
+                      <p>Tente outra busca</p>
+                    </Card>
+                  </Col>
+                )}
               </Row>
             </Container>
           </>
@@ -185,6 +243,21 @@ export default function Books() {
                       </Card>
                     </Col>
                 )})}
+
+                {booksData.filter((obj) =>
+                  obj.testamentoId === 1 && obj.livro.toLowerCase().includes(search.toLowerCase())
+                ).length === 0 && (
+                  <Col>
+                    <Card
+                      color='dark'
+                      body
+                      className="text-center"
+                    >
+                      <h5>Sem resultados!</h5>
+                      <p>Tente outra busca</p>
+                    </Card>
+                  </Col>
+                )}
               </Row>
             </Container>
           </>
@@ -210,6 +283,21 @@ export default function Books() {
                       </Card>
                     </Col>
                 )})}
+
+                {booksData.filter((obj) =>
+                  obj.livroId >= 40 && obj.livroId <= 43 && obj.livro.toLowerCase().includes(search.toLowerCase())
+                ).length === 0 && (
+                  <Col>
+                    <Card
+                      color='dark'
+                      body
+                      className="text-center"
+                    >
+                      <h5>Sem resultados!</h5>
+                      <p>Tente outra busca</p>
+                    </Card>
+                  </Col>
+                )}
               </Row>
             </Container>
           </>
@@ -235,6 +323,21 @@ export default function Books() {
                       </Card>
                     </Col>
                 )})}
+
+                {booksData.filter((obj) =>
+                  obj.livroId >= 1 && obj.livroId <= 5 && obj.livro.toLowerCase().includes(search.toLowerCase())
+                ).length === 0 && (
+                  <Col>
+                    <Card
+                      color='dark'
+                      body
+                      className="text-center"
+                    >
+                      <h5>Sem resultados!</h5>
+                      <p>Tente outra busca</p>
+                    </Card>
+                  </Col>
+                )}
               </Row>
             </Container>
           </>

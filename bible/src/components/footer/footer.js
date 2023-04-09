@@ -11,7 +11,7 @@ export default function Footer() {
         <Container>
             <p>O presente site utiliza a <Link to={'https://github.com/MarcioAndrade/Biblia'}>Bible Api</Link>.</p>
             <br/>
-            <p>Desenvolvido por <Link>@GabrielOliver</Link></p>
+            <p>Desenvolvido por <Link to={'https://github.com/dev-gabriel-oliveira'}>@GabrielOliver</Link></p>
         </Container>
     </footer>
   );

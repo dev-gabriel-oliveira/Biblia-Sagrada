@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Container } from 'reactstrap';
-import { IoMdSad } from 'react-icons/io';
 
 import './not_found.css'
 import Christ from './Christ.png';
@@ -9,7 +8,7 @@ import Christ from './Christ.png';
 export default function NotFound() {
   return (
     <Container className='not-found'>
-        <img id='Christ' src={Christ} width={'25%'}/>
+        <img id='Christ' src={Christ} width={'25%'} alt=''/>
 
         <hr/>
 

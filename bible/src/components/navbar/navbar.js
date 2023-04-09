@@ -15,6 +15,8 @@ export default function NavBar() {
           <hr/>
           <li><Link className="dropdown-item" to="/livros">Livros</Link></li>
           <hr/>
+          <li><Link className="dropdown-item" to="/passagens">Passagens</Link></li>
+          <hr/>
           <li><Link className="dropdown-item" to="/sobre">Sobre</Link></li>
         </ul>
       </div>

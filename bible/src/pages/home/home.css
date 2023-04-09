@@ -1,12 +1,13 @@
 .home{
-    padding: 0% 6%;
+    padding: 0% 8%;
 }
 .home .container.title img{
+    filter: grayscale(25%) brightness(90%);
     border-radius: 50%;
     transition: 1.5s;
 }
 .home .container.title img:hover{
-    filter: brightness(130%);
+    filter: grayscale(0) brightness(120%);
     transform: scale(102%);
     box-shadow: 0px 0px 25px 0px wheat;
 }
